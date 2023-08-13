@@ -1,0 +1,22 @@
+.ptw-breadcrumb {
+  display: flex;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    color: #8a8a8a;
+
+    span {
+      display: flex;
+      font-size: 15px;
+      margin: 0 11px;
+    }
+
+    &:not(:first-child) {
+      p {
+        cursor: pointer;
+      }
+    }
+  }
+}

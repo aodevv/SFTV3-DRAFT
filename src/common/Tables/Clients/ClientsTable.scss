@@ -1,0 +1,249 @@
+@mixin cell-width($w) {
+  min-width: $w;
+  max-width: $w;
+  width: $w;
+}
+
+.clients-table {
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  background-color: white;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+
+  &.no-zeros {
+    .violations__container {
+      .zero {
+        visibility: hidden;
+      }
+    }
+  }
+
+  th {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    .table-arrow {
+      position: absolute;
+      transform: translate(3px, 1px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  th,
+  td {
+    &.id {
+      @include cell-width(40px);
+    }
+
+    &.subscription {
+      @include cell-width(160px);
+      font-weight: 400;
+      font-size: 12px;
+      color: var(--color-text-dark);
+    }
+    &.next_bill {
+      @include cell-width(220px);
+      font-weight: 400;
+      font-size: 12px;
+      color: var(--color-text-dark);
+    }
+    &.subscription_type {
+      @include cell-width(140px);
+      font-weight: 400;
+      font-size: 12px;
+      color: var(--color-text-dark);
+    }
+    &.contact_person {
+      @include cell-width(180px);
+    }
+    &.sites {
+      @include cell-width(100px);
+      font-size: 12px;
+      color: var(--color-text-dark);
+    }
+    &.violations_count {
+      @include cell-width(120px);
+    }
+    &.department {
+      @include cell-width(160px);
+      font-weight: 400;
+      font-size: 12px;
+      color: var(--color-text-dark);
+      text-transform: capitalize;
+    }
+    &.company {
+      @include cell-width(140px);
+    }
+    &.phone {
+      @include cell-width(150px);
+      color: #47ca5b;
+      font-weight: 400;
+      font-size: 12px;
+    }
+    &.email {
+      @include cell-width(220px);
+      color: #ff772a;
+      font-weight: 400;
+      font-size: 12px;
+    }
+    &.status {
+      @include cell-width(140px);
+    }
+
+    &:last-child {
+      @include cell-width(80px);
+    }
+  }
+
+  td {
+    &.sites {
+      cursor: pointer;
+    }
+  }
+
+  &__toggle {
+    position: relative;
+    &-spinner {
+      position: absolute;
+      left: 10px;
+      z-index: 2;
+      color: var(--color-text-dark);
+      display: flex;
+      animation: spiner 2s linear infinite;
+    }
+  }
+
+  tbody {
+    tr {
+      height: 52px;
+      &:hover {
+        background-color: rgb(192, 192, 192, 0.3);
+        // cursor: pointer;
+      }
+
+      &.highlight-worker {
+        background-color: #42a3df2c;
+      }
+    }
+  }
+
+  thead,
+  tbody {
+    tr {
+      &:not(:first-child) {
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+      }
+      th {
+        // padding: 10px 0 10px 0;
+        font-weight: 500;
+        font-size: 12px;
+        height: 30px;
+        color: white;
+        background-color: #42a4df;
+      }
+
+      td {
+        height: 49px;
+        white-space: nowrap;
+        text-align: center;
+        & > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        & > img {
+          height: 40px;
+        }
+
+        &:first-child {
+          text-align: center;
+          font-size: 12px;
+          font-weight: 500;
+          color: #909090;
+        }
+
+        min-height: 50px;
+
+        // & > div {
+        //   display: flex;
+        //   justify-content: center;
+        //   align-items: center;
+        // }
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.missing-image {
+  font-size: 30px;
+  color: rgb(51, 51, 51);
+}
+
+.worker-company-image {
+  max-height: 30px;
+  max-width: 120px;
+}
+
+.next-bill-time {
+  width: 213px;
+  height: 24px;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  font-weight: 700;
+  font-size: 11px;
+
+  color: #ffffff;
+
+  &.success {
+    background-color: #47ca5b;
+  }
+
+  &.danger {
+    background-color: #ff3838;
+  }
+
+  &.warning {
+    background-color: #f5b100;
+  }
+
+  &.gray {
+    background-color: rgb(165, 165, 165);
+  }
+}
+
+.subscription_type-text {
+  background-color: white;
+  width: 87px;
+  margin: auto;
+  color: #42a4df;
+  padding: 4px 0px;
+  border-radius: 20px;
+  font-size: 11px;
+  border: 1px solid #42a4df;
+
+  &.missing_subscription {
+    border: 1px solid #cacaca;
+    color: #cacaca;
+  }
+}
+
+@keyframes spiner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

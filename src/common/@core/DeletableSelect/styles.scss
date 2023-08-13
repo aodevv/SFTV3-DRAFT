@@ -1,0 +1,19 @@
+.select-loader {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    display: flex;
+    font-size: 35px;
+    animation: spin 1.2s linear infinite;
+  }
+  &-delete {
+    display: inline-flex;
+    border-radius: 50%;
+    margin-right: 4px;
+    padding: 0 8px;
+    animation: spin 1.2s linear infinite;
+  }
+}

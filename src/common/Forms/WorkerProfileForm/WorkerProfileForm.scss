@@ -1,0 +1,101 @@
+.worker-profile-form {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  padding-left: 20px;
+  padding-top: 10px;
+  .worker-profile-form-divider {
+    margin-bottom: 10px;
+    img {
+      display: inline;
+    }
+    p {
+      display: inline-block;
+      color: #c4c4c4de;
+      font-size: 13px;
+      font-weight: 600;
+      margin-left: 10px;
+      position: relative;
+      width: 90%;
+      &::after {
+        content: "";
+        display: block;
+        width: 83.5%;
+        height: 1px;
+        background: #ebebeb;
+        left: 24%;
+        top: 50%;
+        position: absolute;
+      }
+    }
+    img {
+      vertical-align: middle;
+    }
+    .form-divider-text {
+      &::after {
+        left: 20%;
+        width: 87.5%;
+      }
+    }
+  }
+  .worker-personal-info {
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    input,
+    textarea {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+    .worker-name {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 10px;
+      .form-input {
+        .input-error {
+          bottom: -5px;
+        }
+      }
+    }
+    .worker-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 10px;
+      .form-select {
+        .select-error {
+          bottom: -16px;
+        }
+      }
+      .worker-information-birthday {
+        & > p {
+          font-weight: 500;
+          font-size: 12px;
+          color: #313131;
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
+  .worker-professional-info {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+  }
+  .worker-function {
+    padding-left: 20px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+  }
+  .worker-contact-info {
+    padding-top: 10px;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+  }
+}

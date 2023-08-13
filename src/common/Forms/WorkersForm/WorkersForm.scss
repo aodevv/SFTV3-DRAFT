@@ -1,0 +1,156 @@
+.workers-form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &.not-first {
+    margin-top: 30px;
+  }
+
+  &__divider {
+    position: absolute;
+    top: -15px;
+    color: red;
+    font-size: 14px;
+
+    text-transform: capitalize;
+
+    color: #c4c4c4;
+
+    .name {
+      position: absolute;
+      white-space: nowrap;
+      background-color: white;
+      padding: 5px;
+      transform: translateY(-50%);
+
+      i {
+        display: inline-flex;
+        transform: translateY(2px);
+      }
+    }
+
+    .line {
+      width: 645px;
+      height: 1px;
+      background-color: #ebebeb;
+    }
+  }
+
+  &:hover {
+    // transition: visibility 200ms ease;
+    .delete-form {
+      visibility: visible;
+    }
+  }
+  .delete-form {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    // color: #ff3838;
+    background-color: transparent;
+    border: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all ease 200ms;
+    visibility: hidden;
+
+    i {
+      display: flex;
+      font-size: 26px;
+      color: #ff3838;
+    }
+
+    &:hover {
+      box-shadow: 0 0 12px 0px #ff38383d;
+    }
+  }
+
+  &__avatar {
+    width: 40%;
+    margin: 0 auto;
+    color: var(--color-text-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    img {
+      width: 120px;
+      height: 120px;
+      background-color: rgba(128, 128, 128, 0.247);
+      color: transparent;
+      border-radius: 100%;
+      margin-bottom: 14px;
+    }
+    p {
+      text-align: center;
+      //   width: 100px;
+    }
+  }
+
+  &__inputs {
+    width: 100%;
+    margin-bottom: 20px;
+    & > div:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &-info {
+      display: grid;
+      grid-template-columns:
+        minmax(auto, 25%) minmax(auto, 25%) minmax(auto, 20%)
+        minmax(auto, 30%);
+      column-gap: 10px;
+    }
+
+    &-contact {
+      display: grid;
+      grid-template-columns: minmax(auto, 30%) minmax(auto, 70%);
+      column-gap: 10px;
+    }
+    &-company {
+      // display: grid;
+      // grid-template-columns: minmax(auto, 30%) minmax(auto, 30%) minmax(
+      //     auto,
+      //     40%
+      //   );
+      // column-gap: 10px;
+      display: flex;
+      gap: 10px;
+      & > div {
+        flex: 1;
+      }
+    }
+    &-last {
+      // display: grid;
+      // grid-template-columns: 1fr 1fr;
+      // column-gap: 10px;
+      gap: 10px;
+      display: flex;
+      width: 100%;
+      & > div {
+        flex: 1;
+      }
+      padding-top: 5px;
+    }
+  }
+
+  &__datepicker {
+    & > p {
+      color: var(--color-text-dark);
+      font-weight: 500;
+      font-size: 12px;
+      margin-bottom: 6px;
+      cursor: default;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.loginform {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    width: 305px;
+    position: relative;
+
+    h1 {
+      font-size: 25px;
+      color: var(--color-text-dark);
+      margin-bottom: 5px;
+    }
+    h2 {
+      font-size: 14px;
+      margin-bottom: 53px;
+      color: var(--color-text-grey);
+      max-width: 228px;
+
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .auth-input {
+      margin-bottom: 26px;
+    }
+
+    .auth-error {
+      position: absolute;
+      margin-top: 10px;
+      text-align: left;
+      font-size: 16px;
+      color: red;
+    }
+  }
+
+  &__resend {
+    margin-top: 36px;
+    line-height: 20px;
+    font-size: 13px;
+    color: #afafaf;
+
+    .resend-timer {
+      display: flex;
+      align-items: center;
+      p {
+        margin-right: 20px;
+      }
+
+      .desactivated {
+        cursor: not-allowed;
+        color: #afafafc5;
+      }
+    }
+
+    p {
+      font-weight: 500;
+
+      &.blue-text {
+        color: #40a7e3;
+        cursor: pointer;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .loginform {
+    form {
+      width: 90%;
+    }
+  }
+}

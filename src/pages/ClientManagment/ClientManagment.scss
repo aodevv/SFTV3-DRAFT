@@ -1,0 +1,27 @@
+.cm-page {
+  padding: 27px 44px;
+  position: relative;
+
+  &.preferences {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.h-full {
+    height: 100%;
+  }
+
+  &__toast {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 4;
+  }
+
+  &__cards {
+    & > p {
+      margin-bottom: 13px;
+    }
+  }
+}

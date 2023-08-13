@@ -1,0 +1,203 @@
+@mixin cell-width($w) {
+  min-width: $w;
+  max-width: $w;
+  width: $w;
+}
+
+.users-table {
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  background-color: white;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    .table-arrow {
+      position: absolute;
+      transform: translate(3px, 1px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  th,
+  td {
+    &.id {
+      @include cell-width(30px);
+    }
+
+    &.created_at {
+      @include cell-width(100px);
+    }
+    &.user,
+    &.reportto {
+      @include cell-width(140px);
+      .user-cell {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        img {
+          width: 34px;
+          height: 34px;
+          object-fit: cover;
+          border-radius: 100%;
+        }
+
+        &__text {
+          text-align: left;
+        }
+        &__function {
+          color: #909090;
+          font-size: 11px;
+        }
+      }
+    }
+    &.age {
+      @include cell-width(30px);
+    }
+    &.department {
+      @include cell-width(100px);
+    }
+    &.role {
+      @include cell-width(80px);
+    }
+    &.company {
+      @include cell-width(120px);
+    }
+
+    &.phone {
+      @include cell-width(90px);
+      color: #47ca5b;
+    }
+    &.email {
+      @include cell-width(180px);
+      color: #ff772a;
+    }
+    &.status {
+      @include cell-width(80px);
+    }
+
+    &:last-child {
+      @include cell-width(80px);
+    }
+  }
+
+  td {
+    &.sites {
+      cursor: pointer;
+    }
+  }
+
+  &__toggle {
+    position: relative;
+    &-spinner {
+      position: absolute;
+      left: 10px;
+      z-index: 2;
+      color: var(--color-text-dark);
+      display: flex;
+      animation: spiner 2s linear infinite;
+    }
+  }
+
+  tbody {
+    tr {
+      height: 52px;
+      &:hover {
+        background-color: rgb(192, 192, 192, 0.3);
+        cursor: pointer;
+      }
+
+      &.highlight-worker {
+        background-color: #42a3df2c;
+      }
+    }
+  }
+
+  thead,
+  tbody {
+    tr {
+      &:not(:first-child) {
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+      }
+      th {
+        // padding: 10px 0 10px 0;
+        font-weight: 500;
+        font-size: 12px;
+        height: 30px;
+        color: white;
+        background-color: #42a4df;
+      }
+
+      td {
+        height: 49px;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+        color: #484848;
+        & > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        & > img {
+          height: 40px;
+        }
+
+        &:first-child {
+          text-align: center;
+        }
+
+        min-height: 50px;
+
+        // & > div {
+        //   display: flex;
+        //   justify-content: center;
+        //   align-items: center;
+        // }
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__toggle {
+    position: relative;
+    &-spinner {
+      position: absolute;
+      left: 75px;
+      font-size: 20px;
+      z-index: 2;
+      color: var(--color-text-dark);
+      display: flex;
+      animation: spiner 2s linear infinite;
+    }
+  }
+}
+
+.missing-image {
+  font-size: 30px;
+  color: rgb(51, 51, 51);
+}
+
+.worker-company-image {
+  max-height: 30px;
+  max-width: 120px;
+}
+
+@keyframes spiner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

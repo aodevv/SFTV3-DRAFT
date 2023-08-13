@@ -1,0 +1,36 @@
+.blue-toggle {
+  background-color: #d7d7d7;
+  border: 1px solid #bfbfbf;
+  width: 34px;
+  height: 18px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  user-select: none;
+  position: relative;
+  cursor: pointer;
+  transition: all 200ms ease;
+  .ball {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateX(-18px);
+    z-index: 3;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease;
+  }
+
+  &.active {
+    background-color: #42a4df;
+    border: 1px solid #2f8bc2;
+    padding-left: 10px;
+
+    .ball {
+      left: initial;
+      transform: translateX(7px);
+    }
+  }
+}

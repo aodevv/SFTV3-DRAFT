@@ -1,0 +1,108 @@
+.myprofile-form {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  padding-left: 20px;
+  padding-top: 20px;
+  .myprofile-form-divider {
+    img {
+      display: inline;
+    }
+    p {
+      display: inline-block;
+      color: #c4c4c4de;
+      font-size: 13px;
+      font-weight: 600;
+      margin-left: 10px;
+      position: relative;
+      width: 90%;
+      &::after {
+        content: "";
+        display: block;
+        width: 83.5%;
+        height: 1px;
+        background: #ebebeb;
+        left: 24%;
+        top: 50%;
+        position: absolute;
+      }
+    }
+    img {
+      vertical-align: middle;
+    }
+    .form-divider-text {
+      &::after {
+        left: 20%;
+        width: 86.5%;
+      }
+    }
+  }
+  .myprofile-form-inputs {
+    padding-top: 15px;
+    padding-left: 10px;
+    input,
+    textarea {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+    .form-title {
+      display: grid;
+      grid-template-columns: minmax(auto, 60%) minmax(auto, 20%) minmax(
+          auto,
+          20%
+        );
+      column-gap: 10px;
+    }
+    .form-legal {
+      //   width: 100%;
+      & > div {
+        flex: 1;
+      }
+      display: flex;
+      //   grid-template-columns: minmax(auto, 50%) minmax(auto, 50%);
+      column-gap: 10px;
+    }
+    .form-description {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .form-address {
+      display: grid;
+      grid-template-columns: minmax(auto, 80%) minmax(auto, 20%);
+      column-gap: 10px;
+    }
+    .form-address2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr 2fr;
+      column-gap: 10px;
+      & > * {
+        min-width: 0px;
+      }
+    }
+    .form-input {
+      .input-error {
+        bottom: -5px;
+      }
+    }
+    .form-select {
+      .select-error {
+        bottom: 0px;
+      }
+    }
+  }
+  .form-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    margin-top: 15px;
+    padding-left: 10px;
+    .form-input {
+      .input-error {
+        bottom: -16px;
+      }
+    }
+  }
+  .password-form {
+    padding: 17px 29px;
+  }
+}

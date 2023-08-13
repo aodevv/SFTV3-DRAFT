@@ -1,0 +1,111 @@
+.site-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__info {
+    text-align: center;
+    margin-bottom: 15px;
+
+    h1 {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 35px;
+      color: var(--color-text-dark);
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 12px;
+      color: var(--color-text-dark);
+    }
+  }
+
+  &__error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  &__inputs {
+    width: 100%;
+    margin-bottom: 20px;
+
+    & > div:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    .csform-title {
+      display: grid;
+      grid-template-columns: minmax(auto, 30%) minmax(auto, 50%) minmax(
+          auto,
+          20%
+        );
+      column-gap: 10px;
+    }
+
+    .csform-legal {
+      display: grid;
+      grid-template-columns: minmax(auto, 50%) minmax(auto, 50%);
+      column-gap: 10px;
+    }
+
+    .csform-desc {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .csform-addr {
+      display: grid;
+      grid-template-columns: minmax(auto, 60%) minmax(auto, 20%) minmax(
+          auto,
+          20%
+        );
+      column-gap: 10px;
+    }
+
+    .csform-addr2 {
+      display: grid;
+      grid-template-columns: 1fr 2fr 2fr;
+      column-gap: 10px;
+      & > * {
+        min-width: 0px;
+      }
+    }
+    .csform-contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 10px;
+    }
+  }
+}
+
+.client-name {
+  width: 100%;
+
+  &__label {
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--color-text-dark);
+    margin-bottom: 6px;
+  }
+
+  &__box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 46px;
+    border: 0.5px solid #b6b6b6;
+    background: #f2f2f2;
+    border-radius: 5px;
+    padding: 8px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

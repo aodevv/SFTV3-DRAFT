@@ -1,0 +1,143 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --color-text-dark: #313131;
+  --color-text-grey: #c7c7c7;
+  --color-text-grey-2: #bbbbbb;
+  --color-text-grey-3: #d3d3d3;
+  --color-text-grey-4: #c8c8c8c8;
+  --color-text-grey-5: #d8d8d8d8;
+  --color-text-grey-6: #c1c1c1c1;
+
+  --color-blue: #40a7e3;
+  --color-green: #37b34a;
+  --color-green-dark: #239434;
+  --color-green-success: #47ca5b;
+  --color-green-warning: #f5b100;
+
+  --color-error: red;
+
+  --background-light-grey: #e5e5e5;
+
+  --bs-border-color: #f0eff5;
+  --bs-dropdown-link-hover-bg: #f8f9fa;
+}
+
+.custom-scrollbar {
+  scrollbar-color: #cdd3e0 transparent;
+  scrollbar-width: thin;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 13px;
+  background: #cdd3e0;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #b3b9c9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.u-mt-l {
+  margin-top: 8rem !important;
+}
+.u-mt-m {
+  margin-top: 4rem !important;
+}
+.u-mt-s {
+  margin-top: 2.4rem !important;
+}
+.u-mt-xs {
+  margin-top: 1rem !important;
+}
+.u-mb-l {
+  margin-bottom: 8rem !important;
+}
+.u-mb-m {
+  margin-bottom: 4rem !important;
+}
+.u-mb-s {
+  margin-bottom: 2.4rem !important;
+}
+.u-mb-xs {
+  margin-bottom: 0.4rem !important;
+}
+.u-mr-l {
+  margin-right: 8rem !important;
+}
+.u-mr-m {
+  margin-right: 4rem !important;
+}
+.u-mr-s {
+  margin-right: 1.6rem !important;
+}
+.u-mr-xs {
+  margin-right: 0.4rem !important;
+}
+.u-ml-l {
+  margin-left: 8rem !important;
+}
+.u-ml-m {
+  margin-left: 4rem !important;
+}
+.u-ml-s {
+  margin-left: 1.6rem !important;
+}
+.u-ml-xs {
+  margin-left: 0.4rem !important;
+}
+.u-px-1 {
+  padding: 0 1.6rem !important;
+}
+.list-unstyled {
+  list-style: none !important;
+}
+.no-decoration {
+  text-decoration: none !important;
+}
+.u-font-xs {
+  font-size: 1.1rem !important;
+}
+.u-vertical-align {
+  vertical-align: middle !important;
+}
+.visi-hidden {
+  visibility: hidden;
+}
+.d-none {
+  display: none !important;
+}
+.px-s {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

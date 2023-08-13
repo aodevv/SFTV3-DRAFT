@@ -1,0 +1,130 @@
+.ptw-form-modal {
+  width: 501px;
+  border: 0.5px solid #ebebeb;
+  background: #ffffff;
+  position: relative;
+
+  &__header {
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #505050;
+    background: #f2f2f2;
+    font-weight: 500;
+    font-size: 15px;
+
+    &-title {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 18px;
+
+      .case {
+        color: var(--color-blue);
+        background-color: #eaf7ff;
+        border: 0.5px solid #aee1ff;
+        border-radius: 3px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+      }
+    }
+
+    .close-modal {
+      color: #ababab;
+      font-size: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    padding: 24px 7px 24px 24px;
+    max-height: 87vh;
+    overflow-y: scroll;
+    // color: transparent;
+    transition: color 0.4s;
+    transition-delay: 0.5s;
+
+    &-label {
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #aeaeae;
+      margin-bottom: 6px;
+    }
+
+    .grey-label {
+      margin-bottom: 20px;
+    }
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb {
+      height: 1.3rem;
+      //width: 1rem;
+      background-clip: padding-box;
+      border-radius: 13px;
+      border: 5px solid transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      box-shadow: inset 0 0 0 4px;
+    }
+    &:hover {
+      color: rgba(128, 128, 128, 0.726);
+      transition: color 0.3s ease;
+    }
+  }
+
+  &__delete {
+    position: absolute;
+    bottom: 46px;
+    left: 24px;
+
+    span {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: red;
+      transform: translateY(50%);
+      cursor: pointer;
+      transition: all 200ms ease;
+      &:hover {
+        box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.4);
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 30px);
+  }
+  to {
+    transform: translate(-50%, 26px);
+  }
+}
+
+@media screen and (max-height: 720px) {
+  .danger-cat-modal__content {
+    max-height: 80vh;
+  }
+}
+
+@keyframes pulse {
+  from {
+    background-color: rgba(255, 0, 0, 0.4);
+    color: black;
+  }
+  to {
+    background-color: transparent;
+  }
+}

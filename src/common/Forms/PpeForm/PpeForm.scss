@@ -1,0 +1,14 @@
+.ppe-form {
+    &__dropzone {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 20px;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        .title {
+            color: #313131;
+            font-weight: 500;
+            font-size: 11px;
+        }
+    }
+}

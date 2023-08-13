@@ -1,0 +1,9 @@
+.sites-page {
+  padding: 27px 44px;
+
+  &__cards {
+    & > p {
+      margin-bottom: 13px;
+    }
+  }
+}

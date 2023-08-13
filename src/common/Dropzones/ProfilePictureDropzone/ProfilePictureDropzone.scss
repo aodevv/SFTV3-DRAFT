@@ -1,0 +1,114 @@
+.dropzone {
+    width: 120px;
+    height: 120px;
+    margin: 10px auto;
+    border: 2px dashed transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 200ms ease;
+    position: relative;
+    &:hover {
+      background-color: #e7e7e744;
+    }
+    &__img {
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        img {
+          width: 120px;
+          height: 120px;
+          object-fit: cover;
+        }
+    }
+
+    .dropped-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
+  
+    &__icon {
+        position: sticky;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        top: 0;
+        color: #e7e7e7;
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 120px;
+        transition: all 200ms ease;
+        border-radius: 50%;
+        &:hover {
+            opacity: 1;
+        }
+    }
+  
+    &__text {
+      width: 164px;
+      text-align: center;
+      font-size: 12px;
+      color: #b5b5b5;
+      line-height: 17px;
+  
+      span {
+        color: #1b8bce;
+      }
+    }
+  
+    &__is-active {
+      border-color: #42a4df !important;
+    }
+  
+    &__accepted {
+      border-color: #00e676;
+    }
+  
+    &__error,
+    &__rejected {
+      border-color: #ff1744;
+    }
+  
+    &__error-msg {
+      color: #ff1744;
+      text-align: center;
+      width: 245px;
+      font-size: 12px;
+    }
+  
+    &__file-infos {
+      color: black;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+  
+      .file-size {
+        color: red;
+      }
+  
+      button {
+        background-color: transparent;
+        border: none;
+        color: red;
+        border: 1px solid red;
+        padding: 0 4px;
+        transition: all 200ms ease;
+        cursor: pointer;
+        border-radius: 2px;
+  
+        &:hover {
+          box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+  

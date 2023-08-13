@@ -1,0 +1,139 @@
+.delete-modal {
+  width: 574px;
+  border-radius: 10px;
+  border: 0.5px solid #ebebeb;
+
+  &__header {
+    display: flex;
+    padding: 10px 15px;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-text-dark);
+    background: #f2f2f2;
+    font-weight: 500;
+    font-size: 15px;
+
+    &-text {
+      display: flex;
+      align-items: center;
+    }
+    &-icon {
+      color: #ff3838;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 6px;
+      border-radius: 3px;
+      width: 36px;
+      height: 36px;
+      font-size: 26px;
+      background-color: #f0d5d5;
+    }
+
+    .close-modal {
+      color: #ababab;
+      font-size: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    padding: 20px 26px;
+    .delete-warning {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #313131;
+      margin-bottom: 14px;
+
+      span {
+        color: red;
+      }
+    }
+
+    .delete-info {
+      font-size: 11px;
+      line-height: 18px;
+      color: #ababab;
+      margin-bottom: 20px;
+
+      &__default {
+        span {
+          font-weight: 500;
+          font-size: 12px;
+          color: var(--color-text-dark);
+          margin-bottom: 8px;
+          display: inline-block;
+        }
+
+        &-confirmation {
+          display: flex;
+          margin-bottom: 6px;
+
+          input {
+            margin-right: 10px;
+          }
+          p {
+            font-weight: 400;
+            font-size: 12px;
+            color: var(--color-text-dark);
+          }
+        }
+      }
+    }
+
+    .delete-btn {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      button {
+        padding: 7px 12px;
+        min-width: 106px;
+        min-height: 40px;
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        transition: all 200ms ease;
+      }
+      &__cancel {
+        background-color: transparent;
+        &:hover {
+          background-color: rgb(240, 240, 240);
+        }
+      }
+      &__cta {
+        color: white;
+        background: #ed4c5c;
+        border-radius: 2px;
+        width: 150px;
+        &:hover {
+          background: #d0414f;
+        }
+        &.disabled {
+          cursor: not-allowed;
+          background-color: rgb(197, 197, 197);
+        }
+      }
+      .spinner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: spin 1s linear infinite;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

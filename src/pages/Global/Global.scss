@@ -1,0 +1,11 @@
+.global {
+  height: 100vh;
+  display: flex;
+
+  .right {
+    flex: 1;
+    height: 100vh;
+    display: grid;
+    flex-direction: column;
+  }
+}

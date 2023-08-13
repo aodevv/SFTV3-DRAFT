@@ -1,0 +1,139 @@
+.ptw-card {
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 13px;
+    position: relative;
+
+    &-spinner {
+      position: absolute;
+      right: 19px;
+      z-index: 20;
+      font-size: 20px;
+      top: 14px;
+      background-color: white;
+      box-shadow: 0 0 10px 10px rgba($color: #fff, $alpha: 1);
+      i {
+        display: flex;
+        animation: spin 2000ms infinite linear;
+      }
+    }
+  }
+
+  &__content {
+    padding: 31px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+
+    .carousel {
+      height: 70px;
+    }
+    &-img {
+      margin-bottom: 30px;
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      img {
+        transition: all 200ms ease;
+        height: 70px;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    &-link {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      justify-content: space-between;
+      font-size: 14px;
+      transition: all 200ms ease;
+
+      span {
+        display: flex;
+        transition: transform 200ms ease;
+      }
+
+      &:hover {
+        span {
+          transform: translateX(6px);
+        }
+      }
+
+      &.noLink {
+        cursor: auto;
+        text-align: center;
+      }
+    }
+
+    &.disabled {
+      img {
+        opacity: 0.3;
+        filter: grayscale(1);
+      }
+
+      .ptw-card__content-link {
+        cursor: not-allowed;
+        color: #cacaca;
+        &.noLink {
+          cursor: default;
+        }
+        &:hover {
+          span {
+            transform: translateX(0px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.ptw-card-small {
+  .ptw-card__content {
+    padding-top: 6px;
+    &-img {
+      margin-bottom: 20px;
+      img {
+        transition: all 200ms ease;
+      }
+    }
+    &-link {
+      justify-content: center;
+    }
+  }
+}
+
+.card-checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid #d1d1d1;
+  font-size: 18px;
+  color: var(--color-blue);
+  transition: all 200ms ease;
+  svg {
+    opacity: 0;
+  }
+
+  &.checked {
+    border-color: var(--color-blue);
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 5px 0 rgba($color: #40a7e3, $alpha: 0.8);
+  }
+}

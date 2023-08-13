@@ -1,0 +1,41 @@
+.toggle {
+  background-color: #d7d7d7;
+  border: 1px solid #bfbfbf;
+  width: 70px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  user-select: none;
+
+  font-weight: 500;
+  font-size: 12px;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  transition: all 200ms ease;
+
+  .ball {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateX(-18px);
+    z-index: 2;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease;
+  }
+
+  &.active {
+    background-color: var(--color-green);
+    border: 1px solid var(--color-green-dark);
+    padding-left: 10px;
+
+    .ball {
+      left: initial;
+      transform: translateX(42px);
+    }
+  }
+}

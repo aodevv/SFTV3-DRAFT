@@ -1,0 +1,37 @@
+.column-toggle {
+  position: relative;
+
+  &.hidden {
+    visibility: hidden;
+  }
+  i {
+    color: #dcdcdc;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .column-dd {
+    position: relative;
+    z-index: 300;
+    width: 162px;
+    display: flex;
+
+    &.left {
+      left: -20px;
+      // top: 18px;
+    }
+
+    li {
+      font-size: 11px;
+      color: #313131;
+
+      &:first-child {
+        color: #989797;
+        margin: 5px 0;
+      }
+    }
+  }
+}

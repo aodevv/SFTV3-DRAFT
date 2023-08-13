@@ -1,0 +1,39 @@
+.search {
+  position: relative;
+
+  i {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: var(--color-text-grey-4);
+  }
+  input {
+    width: 365px;
+    height: 38px;
+    border: 1px solid var(--color-text-grey-5);
+    border-radius: 5px;
+    padding: 0 25px;
+    color: var(--color-text-dark);
+
+    outline: none;
+
+    &::placeholder {
+      color: #b6b6b6;
+      font-size: 12px;
+      font-style: normal;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .search {
+    input {
+      width: 200px;
+    }
+  }
+}

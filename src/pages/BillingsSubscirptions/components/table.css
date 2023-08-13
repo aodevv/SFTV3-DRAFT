@@ -1,0 +1,84 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+
+  }
+  
+  table td, table th {
+    
+    padding: 8px;
+  }
+  
+  table tr:nth-child(even){}
+  
+  table tr:hover {background-color: #ddd;}
+  
+  table th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    background-color:rgba(66, 164, 223, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 500;
+    width: 50px;
+    letter-spacing: 0px;
+    
+
+  }
+
+
+  .billing_heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:  rgba(66, 164, 223, 1);
+    height: 30px;
+    border-radius: 5px;
+    border: 1px;
+    border: 1px solid rgba(66, 164, 223, 1);
+
+  }
+
+  .status_heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 5px;
+    background: rgba(212, 239, 255, 1);
+    color: rgba(66, 164, 223, 1);
+
+
+
+  }
+
+  .user_avatar {
+    width: 34px;
+    height: 34px;
+    margin-right: 5px;
+
+  }
+
+
+  .client_data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .icon_position {
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  

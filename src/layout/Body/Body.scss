@@ -1,0 +1,19 @@
+.body {
+  background-color: #f2f2f2;
+  // max-width: calc(100vw - 63px);
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+
+  .table__container {
+    // overflow-x: scroll;
+  }
+
+  &.full-sidebar {
+    // max-width: calc(100vw - 258px);
+  }
+
+  &.full-screen {
+    max-width: 100vw;
+    height: 100vh;
+  }
+}

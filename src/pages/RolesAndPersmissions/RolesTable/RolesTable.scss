@@ -1,0 +1,205 @@
+@mixin cell-width($w) {
+  min-width: $w;
+  // max-width: $w;
+  // width: $w;
+}
+
+.roles-table {
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  background-color: white;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    background-color: white;
+  }
+
+  thead,
+  tbody {
+    tr {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+      &:not(.isRowGrouped) {
+        transition: background-color 200ms ease;
+        &:hover {
+          background-color: #ececec;
+        }
+      }
+
+      &.isExpanded {
+        background-color: #fafafa;
+        td:first-child {
+          color: #313131;
+          font-size: 13px;
+          font-weight: 500;
+
+          .subwrows-length {
+            color: #313131;
+            border-color: #313131;
+          }
+        }
+      }
+
+      th:not(:first-child) {
+        // .add-column {
+        //   position: absolute;
+        //   z-index: 99;
+        //   top: 0;
+        //   right: 0;
+        //   font-size: 20px;
+        //   i {
+        //     display: flex;
+        //     color: #42a4df;
+        //     transform: translate(50%, -50%);
+        //   }
+        // }
+      }
+
+      th:first-child {
+        width: 344px;
+      }
+      th:not(:first-child) {
+        color: red !important;
+      }
+      td:first-child {
+        width: 344px;
+        color: #afafaf;
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      td,
+      th {
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+        &:not(:first-child) {
+          @include cell-width(200px);
+        }
+      }
+
+      th {
+        height: 55px;
+      }
+
+      td {
+        height: 40px;
+        padding: 5px 12px;
+
+        &.isGrouped {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .left {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+          }
+          span {
+            display: flex;
+          }
+          svg {
+            font-size: 20px;
+            transform: rotate(0deg);
+            transition: all 200ms ease;
+          }
+          .not-expanded {
+            svg {
+              transform: rotate(-90deg);
+            }
+          }
+
+          .subwrows-length {
+            padding: 2px 8px;
+            border-radius: 10px;
+            border: 1px solid #c8c8c8;
+            color: #afafaf;
+            font-size: 12px;
+            font-weight: 400;
+            transition: all 200ms ease;
+          }
+        }
+
+        &.isPlaceholder {
+          height: 30px !important;
+          & > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span {
+              color: #313131;
+              font-size: 13px;
+              font-weight: 400;
+            }
+            i {
+              display: inline-flex;
+              color: #c4c4c4;
+              font-size: 18px;
+              cursor: pointer;
+            }
+          }
+        }
+
+        &.isData {
+          height: 30px !important;
+          .cell-checkbox {
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            &__loader {
+              position: absolute;
+              top: -2px;
+              display: flex;
+              font-size: 20px;
+              animation: spin 1s linear infinite;
+              backdrop-filter: blur(2px);
+              background-color: rgba(255, 255, 255, 0.5);
+              padding: 2px;
+              border-radius: 50%;
+            }
+
+            label {
+              position: absolute;
+              display: flex;
+              font-size: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+              color: white;
+              cursor: pointer;
+            }
+            input {
+              appearance: none;
+              -webkit-appearance: none;
+              height: 20px;
+              width: 20px;
+              background-color: transparent;
+              border-radius: 5px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              transition: all 200ms ease;
+              border: 1px solid #d8d8d8;
+
+              &:hover {
+                background-color: rgb(229, 229, 229);
+              }
+              &:checked {
+                background-color: #37b34a;
+                border-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

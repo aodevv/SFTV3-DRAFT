@@ -1,0 +1,63 @@
+.action-dropdown {
+  width: 108px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  i {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 15px;
+    margin-right: 5px;
+  }
+
+  .title {
+    color: #989797;
+    font-size: 11px;
+    text-align: center;
+    &:hover {
+      p {
+        color: #989797 !important;
+      }
+    }
+  }
+
+  .delete,
+  .edit,
+  .preference,
+  .actions-download {
+    display: flex;
+    align-items: center;
+    margin: 2px;
+    &:hover {
+      background-color: #c7c7c746;
+    }
+  }
+
+  .delete {
+    color: red;
+    &:hover {
+      p {
+        color: red !important;
+      }
+    }
+  }
+
+  .edit {
+    i {
+      color: orange;
+    }
+  }
+
+  .preference {
+    i {
+      color: #42a4df;
+    }
+  }
+
+  .actions-download {
+    i {
+      color: #47ca5b;
+    }
+  }
+}

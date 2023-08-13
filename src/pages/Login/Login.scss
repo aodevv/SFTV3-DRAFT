@@ -1,0 +1,29 @@
+.loginpage {
+  position: relative;
+  padding-right: 676px;
+
+  &__img {
+    height: 100vh;
+  }
+
+  &__form {
+    position: absolute;
+    background-color: white;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 676px;
+    max-width: 676px;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .loginpage {
+    padding-right: 0;
+
+    &__form {
+      max-width: none;
+      width: 100vw;
+    }
+  }
+}

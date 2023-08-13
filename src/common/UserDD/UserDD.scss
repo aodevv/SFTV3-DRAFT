@@ -1,0 +1,64 @@
+.user-dd {
+  position: relative;
+  &__menu {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: auto;
+      max-height: 34px;
+      width: auto;
+      max-width: none;
+      aspect-ratio: 1/1;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+
+    i {
+      font-size: 16px;
+      display: flex;
+    }
+
+    h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #7a7a7a;
+      margin-right: 10px;
+    }
+
+    h4 {
+      font-weight: 400;
+      font-size: 11px;
+      color: #9f9f9f;
+    }
+  }
+
+  ul {
+    .user {
+      &__description {
+        cursor: default;
+        &:hover {
+          background-color: transparent;
+        }
+        p:first-child {
+          font-weight: 600;
+          font-size: 12px;
+          margin-bottom: 4px;
+        }
+        p:last-child {
+          font-size: 12px;
+          color: #797979;
+        }
+      }
+
+      &__option {
+        display: flex;
+        font-size: 13px;
+        svg {
+          font-size: 16px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

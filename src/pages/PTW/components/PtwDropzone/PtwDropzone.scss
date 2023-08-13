@@ -1,0 +1,226 @@
+.ptw-dropzone-container {
+  margin-bottom: 20px;
+}
+
+.ptw-dropzone {
+  margin-bottom: 10px;
+  border: 2px dashed #dcdcdc;
+  border-radius: 2px;
+  padding: 20px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 200ms ease;
+
+  &.disabled {
+    background-color: rgb(238, 238, 238);
+    border-color: rgb(190, 190, 190);
+    cursor: not-allowed;
+    .ptw-dropzone__icon {
+      color: white;
+    }
+
+    &:hover {
+      background-color: rgb(238, 238, 238);
+    }
+  }
+
+  &:hover {
+    background-color: #e7e7e744;
+  }
+
+  &__icon {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e7e7e7;
+  }
+
+  &__text {
+    width: 164px;
+    text-align: center;
+    font-size: 12px;
+    color: #b5b5b5;
+    line-height: 17px;
+
+    span {
+      color: #1b8bce;
+    }
+  }
+
+  &__is-active {
+    border-color: #42a4df !important;
+  }
+
+  &__accepted {
+    border-color: #00e676;
+  }
+
+  &__error,
+  &__rejected {
+    border-color: #ff1744;
+  }
+
+  &__error-msg {
+    color: #ff1744;
+    text-align: center;
+    width: 245px;
+    font-size: 12px;
+  }
+
+  &__file-infos {
+    color: black;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    .file-size {
+      color: red;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      color: red;
+      border: 1px solid red;
+      padding: 0 4px;
+      transition: all 200ms ease;
+      cursor: pointer;
+      border-radius: 2px;
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+      }
+    }
+
+    .delete-image {
+      color: red;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      // color: #ff3838;
+      background-color: transparent;
+      margin: auto;
+      border: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all ease 200ms;
+
+      i {
+        display: flex;
+        font-size: 26px;
+        color: #ff3838;
+      }
+
+      &:hover {
+        box-shadow: 0 0 12px 0px #ff38383d;
+      }
+    }
+  }
+}
+
+.company-profile {
+  color: var(--color-text-dark);
+  font-size: 24px;
+}
+
+.ptw-dropped-images {
+  color: black;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  &__item {
+    padding: 0 15px;
+    width: 100%;
+    background-color: #f7f8fa;
+    min-height: 71px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-left {
+      display: flex;
+      font-size: 19px;
+      color: #44b228;
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      span {
+        display: inline-flex;
+        font-size: 20px;
+      }
+      span:first-child {
+        color: #44b228;
+      }
+      span:last-child {
+        color: #bebebe;
+        margin-left: 10px;
+        background-color: #ededed;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 13px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 200ms ease;
+        &:hover {
+          color: #565656;
+          background-color: #cecece;
+        }
+      }
+    }
+
+    &-infos {
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      .dropped-img {
+        background-color: white;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+        margin: 0 25px;
+
+        img {
+          width: 80%;
+        }
+      }
+
+      .dropped-infos {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h3 {
+          font-size: 14px;
+          color: var(--color-text-dark);
+          font-weight: 400;
+        }
+        p {
+          font-size: 11px;
+          color: rgba(92, 87, 97, 0.59);
+        }
+      }
+    }
+  }
+}

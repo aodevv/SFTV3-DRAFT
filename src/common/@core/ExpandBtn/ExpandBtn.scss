@@ -1,0 +1,47 @@
+.expand-btn {
+  display: inline-flex;
+
+  position: relative;
+  width: 34px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #d8d8d8;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+  transition: all 200ms ease;
+
+  .arrow {
+    position: absolute;
+    font-size: 12px;
+    color: #c4c4c4;
+    transition: all 200ms ease;
+
+    &-ur {
+      bottom: 13px;
+      left: 16px;
+    }
+    &-dr {
+      top: 13px;
+      left: 16px;
+    }
+    &-dl {
+      top: 13px;
+      right: 16px;
+    }
+    &-ul {
+      bottom: 13px;
+      right: 16px;
+    }
+  }
+
+  &.full-screen,
+  &:hover {
+    border: 1px solid var(--color-blue);
+    box-shadow: 0px 0px 5px 1px rgba(64, 167, 227, 0.3);
+
+    .arrow {
+      color: var(--color-blue);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.worker-actions {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: all 200ms ease;
+  margin: 0 auto;
+  &:hover {
+    background-color: #d8d8d8;
+  }
+
+  span {
+    display: flex;
+    // color: #8b8b8b;
+  }
+
+  .dropdown {
+    right: 50% !important;
+    transform: translateX(16px);
+  }
+}

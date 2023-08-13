@@ -1,0 +1,58 @@
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+    padding-left: 20px;
+    &__divider {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        img {
+            display: inline;
+            vertical-align: middle;
+        }
+        p {
+            display: inline;
+            color: #C4C4C4DE;
+            font-size: 13px;
+            font-weight: 600;
+            margin-left: 5px;
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                width: 575px;
+                height: 1px;
+                background: #ebebeb;
+                left: 110%;
+                top: 50%;
+                position: absolute;
+            }
+        }
+    }
+    .pform-personal-info {
+        .pform-titles, .pform-info {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            column-gap: 15px;
+            margin-bottom: 5px;
+        }
+        .pform-info {
+            .profile-birthday {
+                p {
+                    font-size: 12px;
+                    font-weight: 500;
+                    margin-bottom: 6px;
+                    
+                }
+            }
+        }
+    }
+    &__contact {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 15px;
+        .form-phone-select__inputs {
+            grid-template-columns: minmax(auto, 20%) minmax(auto, 80%);
+        }
+    }
+}

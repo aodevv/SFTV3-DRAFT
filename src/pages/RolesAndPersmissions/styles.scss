@@ -1,0 +1,21 @@
+.roles-permissions {
+  padding: 27px 44px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    & > p {
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    overflow-x: auto; //!!!!!!!!!!!!!!!!!!!!!
+    max-height: calc(100vh - 157px);
+  }
+}

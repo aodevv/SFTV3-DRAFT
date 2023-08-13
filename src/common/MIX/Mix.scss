@@ -1,0 +1,156 @@
+.burger {
+  cursor: pointer;
+  width: 17px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .burger__content {
+    width: 17px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #c4c4c4;
+    position: relative;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      width: 17px;
+      height: 2px;
+      background-color: #c4c4c4;
+      border-radius: 2px;
+      right: 0;
+    }
+
+    &::after {
+      top: 5px;
+    }
+
+    &::before {
+      bottom: 5px;
+    }
+  }
+}
+
+.search-input {
+  display: inline;
+  position: relative;
+  & > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 9px;
+    color: #c8c8c8;
+    font-size: 13px;
+  }
+  input {
+    height: 30px;
+    padding-left: 30px;
+    padding-right: 10px;
+    border: 1px solid #d8d8d8;
+    width: 365px;
+    background-color: white;
+    border-radius: 2px;
+    outline: none;
+
+    &::placeholder {
+      font-weight: 500;
+      font-size: 12px;
+      color: #c8c8c8;
+    }
+  }
+}
+
+.select {
+  display: inline;
+  position: relative;
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 30px;
+    background-color: white;
+    width: 183px;
+    border: 1px solid #d8d8d8;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  label {
+    position: absolute;
+    color: #909090;
+    font-weight: 400;
+    font-size: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+    cursor: pointer;
+  }
+
+  & > i {
+    position: absolute;
+    right: 6px;
+    font-size: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.expand-btn {
+  display: inline-flex;
+
+  position: relative;
+  width: 34px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #d8d8d8;
+  border-radius: 2px;
+  cursor: pointer;
+
+  .arrow {
+    position: absolute;
+    font-size: 12px;
+    color: #c4c4c4;
+
+    &-ur {
+      bottom: 13px;
+      left: 16px;
+    }
+    &-dr {
+      top: 13px;
+      left: 16px;
+    }
+    &-dl {
+      top: 13px;
+      right: 16px;
+    }
+    &-ul {
+      bottom: 13px;
+      right: 16px;
+    }
+  }
+}
+
+.checkbox {
+  display: flex;
+  label {
+    text-transform: capitalize;
+    margin-left: 10px;
+    cursor: pointer;
+    flex: 1;
+    text-align: left;
+  }
+}

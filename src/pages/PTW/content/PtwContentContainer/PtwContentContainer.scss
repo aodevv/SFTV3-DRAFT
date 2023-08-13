@@ -1,0 +1,54 @@
+.ptw-content-container {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    &-controls {
+      display: flex;
+      align-items: center;
+
+      .add-btn {
+        height: 30px;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__delete {
+    margin-right: 10px;
+    span {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: red;
+      cursor: pointer;
+      transition: all 200ms ease;
+      &:hover {
+        box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.4);
+      }
+    }
+  }
+
+  &__big-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(369px, 1fr));
+    gap: 21px;
+    justify-items: center;
+  }
+  &__small-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(173px, 1fr));
+    gap: 21px;
+    justify-items: center;
+  }
+
+  .flexed-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

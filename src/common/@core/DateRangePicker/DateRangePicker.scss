@@ -1,0 +1,216 @@
+.rangepicker {
+  position: relative;
+
+  &__select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 38px;
+    border: 1px solid #d8d8d8;
+    border-radius: 2px;
+    background-color: white;
+    padding: 10px 5px 10px 10px;
+    width: 180px;
+    border-radius: 5px;
+    cursor: pointer;
+    // margin: 0 10px;
+
+    .date-chevron {
+      font-size: 25px;
+      color: rgb(204, 204, 204);
+      transition: all 200ms ease;
+      // color: #999999;
+
+      &:hover {
+        color: #999999;
+      }
+    }
+
+    &-dates {
+      display: flex;
+      font-weight: 400;
+      font-size: 12px;
+      color: #313131;
+      .divider {
+        margin: 0 5px;
+        //  font-size: 13px;
+      }
+      .placeholder {
+        color: #b6b6b6;
+        font-size: 12px;
+        font-style: normal;
+      }
+    }
+
+    & > i {
+      font-size: 14px;
+      display: inline-flex;
+    }
+  }
+
+  &__calendar {
+    padding: 0;
+    // margin-top: 6px;
+    // margin-right: 10px;
+    width: 221px;
+    border: 1px solid #d8d8d8;
+    background-color: white;
+    user-select: none;
+    padding: 10px 0;
+
+    &-header {
+      padding: 0 10px;
+      margin-bottom: 12px;
+
+      & > p {
+        font-weight: 500;
+        font-size: 11px;
+        color: #989797;
+        margin-bottom: 10px;
+      }
+
+      &__select {
+        display: flex;
+        width: 129px;
+        justify-content: space-between;
+        color: #313131;
+        padding: 6px 6px;
+        border: 1px solid #d8d8d8;
+        cursor: pointer;
+
+        & > p {
+          font-weight: 500;
+          font-size: 12px;
+        }
+
+        i {
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    &-month__select {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+      margin: 10px 0;
+      align-items: center;
+      i {
+        font-size: 15px;
+        cursor: pointer;
+        transition: scale 200ms ease;
+        &:hover {
+          scale: 1.2;
+        }
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 12px;
+        color: #313131;
+      }
+    }
+    &-dates {
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      border-radius: 2px;
+      row-gap: 2px;
+
+      & > p {
+        font-weight: 500;
+        font-size: 11px;
+        color: #313131;
+        text-align: center;
+        margin-bottom: 6px;
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+        padding: 7px 0;
+        cursor: pointer;
+        transition: background-color 200ms ease;
+        font-size: 11px;
+        color: #9a9a9a;
+
+        &.active-month {
+          color: #313131;
+        }
+
+        &.selected {
+          background-color: #42a4df;
+          color: white;
+          &:hover {
+            background-color: #255c7e;
+          }
+        }
+
+        &.isSu-and-selected,
+        &.last-selected {
+          border-top-right-radius: 50%;
+          border-bottom-right-radius: 50%;
+        }
+        &.isMo-and-selected,
+        &.first-selected {
+          border-top-left-radius: 50%;
+          border-bottom-left-radius: 50%;
+        }
+
+        &:hover {
+          background-color: rgb(202, 202, 202);
+        }
+      }
+    }
+  }
+  &__btns {
+    display: flex;
+    justify-content: end;
+    padding: 0 10px;
+
+    button {
+      font-weight: 500;
+      font-size: 12px;
+      background-color: transparent;
+      border: none;
+      padding: 7px 15px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 200ms ease;
+      &:first-child {
+        color: #b6b6b6;
+        &:hover {
+          background-color: rgba(206, 206, 206, 0.205);
+        }
+      }
+
+      &:last-child {
+        margin-left: 6px;
+        background-color: #37c44d;
+        color: white;
+        border: 1px solid #28a43c;
+        transition: all 200ms ease;
+
+        &:hover {
+          background-color: #289138;
+        }
+
+        &:disabled {
+          background-color: rgb(231, 231, 231);
+          cursor: not-allowed;
+          border: 1px solid rgb(231, 231, 231);
+          color: rgb(158, 158, 158);
+        }
+      }
+
+      &:nth-child(2) {
+        color: #b6b6b6;
+        &:hover {
+          background-color: rgba(206, 206, 206, 0.205);
+        }
+      }
+    }
+  }
+}
